@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: Manrope, sans-serif;
+  color: #1d2926;
+  background: #f2f0ea;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(circle at 75% 0%, #e5ece4 0, #f2f0ea 38%);
+}
+main {
+  max-width: 1240px;
+  margin: auto;
+  padding: 38px 44px 60px;
+}
+.topbar,
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.topbar {
+  border-bottom: 1px solid #d7d6cf;
+  padding-bottom: 24px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+h2 {
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  margin: 18px 0 24px;
+}
+h2 em {
+  color: #cf6548;
+  font-style: normal;
+}
+h3 {
+  font-size: 19px;
+  margin-top: 8px;
+}
+.eyebrow,
+.badge,
+.status,
+.hero-note span,
+.metric span {
+  font:
+    500 11px "DM Mono",
+    monospace;
+  letter-spacing: 1.2px;
+}
+.eyebrow {
+  color: #718079;
+}
+.status {
+  border: 1px solid #c9d1c6;
+  border-radius: 99px;
+  padding: 8px 12px;
+  color: #58705e;
+}
+.status i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #759b72;
+  margin-right: 7px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 64px;
+  padding: 76px 0 68px;
+  align-items: end;
+}
+.muted {
+  color: #728079;
+  line-height: 1.6;
+  max-width: 510px;
+}
+.hero-note {
+  border-left: 2px solid #cf6548;
+  padding: 4px 0 4px 18px;
+  display: grid;
+  gap: 6px;
+}
+.hero-note label {
+  color: #cf6548;
+  font:
+    500 11px "DM Mono",
+    monospace;
+  letter-spacing: 1.2px;
+  margin-bottom: 4px;
+}
+.hero-note select {
+  appearance: none;
+  background: #fffdf8;
+  border: 1px solid #c9d1c6;
+  border-radius: 4px;
+  color: #1d2926;
+  cursor: pointer;
+  font:
+    600 16px Manrope,
+    sans-serif;
+  padding: 9px 30px 9px 10px;
+  width: 100%;
+}
+.hero-note span {
+  color: #cf6548;
+  margin-bottom: 8px;
+}
+.hero-note strong {
+  font-size: 19px;
+}
+.hero-note small {
+  color: #728079;
+  margin-top: 8px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #d7d6cf;
+  border-bottom: 1px solid #d7d6cf;
+}
+.metric {
+  padding: 22px 18px 24px 0;
+  border-right: 1px solid #d7d6cf;
+  margin: 18px 18px 18px 0;
+  display: grid;
+  gap: 8px;
+}
+.metric:last-child {
+  border: 0;
+}
+.metric span {
+  color: #78827e;
+}
+.metric strong {
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+.metric small {
+  color: #8b928d;
+}
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 22px;
+  margin-top: 22px;
+}
+.forecast-section {
+  border-top: 1px solid #d7d6cf;
+  margin-top: 34px;
+  padding-top: 26px;
+}
+.section-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.forecast-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(7, minmax(145px, 1fr));
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.forecast-card {
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid #dddcd5;
+  border-top: 3px solid #8ca493;
+  min-height: 246px;
+  padding: 15px;
+}
+.forecast-card.sun {
+  border-top-color: #d79542;
+}
+.forecast-card.rain {
+  border-top-color: #5b91a5;
+}
+.forecast-card.storm {
+  border-top-color: #9c6b87;
+}
+.forecast-date,
+.forecast-detail span {
+  color: #78827e;
+  font:
+    500 10px "DM Mono",
+    monospace;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.forecast-icon {
+  display: block;
+  font-size: 28px;
+  margin: 18px 0 5px;
+}
+.forecast-label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.temperature {
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.temperature b {
+  font-size: 22px;
+}
+.temperature span {
+  color: #89928d;
+  font-size: 13px;
+}
+.forecast-detail {
+  border-top: 1px solid #e1dfd8;
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  padding: 8px 0 0;
+  margin-top: 8px;
+}
+.forecast-detail b {
+  font-size: 11px;
+  white-space: nowrap;
+}
+.panel {
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid #dddcd5;
+  padding: 26px;
+  min-height: 310px;
+}
+.chart {
+  height: 225px;
+  margin-top: 26px;
+}
+.badge {
+  color: #cf6548;
+  border: 1px solid #e4b3a4;
+  padding: 7px 9px;
+}
+.gold-display {
+  display: grid;
+  gap: 10px;
+  margin: 54px 0 28px;
+}
+.gold-display span,
+.gold-display small {
+  color: #7d8982;
+}
+.gold-display strong {
+  font:
+    500 48px "DM Mono",
+    monospace;
+  letter-spacing: -4px;
+}
+.divider {
+  height: 1px;
+  background: #d7d6cf;
+  margin-bottom: 17px;
+}
+.gold-products {
+  margin: 24px 0 20px;
+}
+.product-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid #e1dfd8;
+  padding: 10px 0;
+  font-size: 12px;
+}
+.product-row span {
+  color: #7d8982;
+  text-align: right;
+}
+.product-row strong {
+  font-size: 13px;
+}
+.product-header {
+  border-top: 0;
+  padding-top: 0;
+  font:
+    500 10px "DM Mono",
+    monospace;
+  letter-spacing: 0.7px;
+}
+.product-header span {
+  color: #7d8982;
+}
+.alert {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: #fff0eb;
+  color: #a54e39;
+  border-left: 3px solid #cf6548;
+}
+@media (max-width: 760px) {
+  main {
+    padding: 24px 20px 40px;
+  }
+  .hero-grid,
+  .panel-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-grid {
+    padding: 54px 0 44px;
+  }
+  h2 {
+    letter-spacing: -2px;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metric:nth-child(2) {
+    border-right: 0;
+  }
+  .metric:nth-child(3),
+  .metric:nth-child(4) {
+    margin-top: 0;
+  }
+  .product-row {
+    grid-template-columns: 1.3fr 0.8fr 0.8fr;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .forecast-grid {
+    grid-template-columns: repeat(7, 145px);
+  }
+}

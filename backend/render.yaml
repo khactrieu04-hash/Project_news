@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: vietnam-forecast-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: FRONTEND_ORIGIN
+        sync: false
